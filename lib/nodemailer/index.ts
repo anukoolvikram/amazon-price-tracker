@@ -26,10 +26,9 @@ export async function generateEmailBody(
 
   switch (type) {
     case Notification.WELCOME:
-      subject = `Welcome to Price Tracking for ${shortenedTitle}`;
+      subject = `Welcome to YourPrice for tracking ${shortenedTitle}`;
       body = `
         <div>
-          <h2>Welcome to PriceWise 🚀</h2>
           <p>You are now tracking ${product.title}.</p>
           <p>Here's an example of how you'll receive updates:</p>
           <div style="border: 1px solid #ccc; padding: 10px; background-color: #f8f8f8;">
@@ -82,10 +81,10 @@ export async function generateEmailBody(
 
 const transporter = nodemailer.createTransport({
   pool: true,
-  service: 'hotmail',
+  service: 'gmail',
   port: 2525,
   auth: {
-    user: 'javascriptmastery@outlook.com',
+    user: process.env.EMAIL_ID,
     pass: process.env.EMAIL_PASSWORD,
   },
   maxConnections: 1
@@ -93,7 +92,7 @@ const transporter = nodemailer.createTransport({
 
 export const sendEmail = async (emailContent: EmailContent, sendTo: string[]) => {
   const mailOptions = {
-    from: 'javascriptmastery@outlook.com',
+    from: `"Price tracker" <${process.env.EMAIL_ID}>`,
     to: sendTo,
     html: emailContent.body,
     subject: emailContent.subject,
@@ -101,7 +100,6 @@ export const sendEmail = async (emailContent: EmailContent, sendTo: string[]) =>
 
   transporter.sendMail(mailOptions, (error: any, info: any) => {
     if(error) return console.log(error);
-    
     console.log('Email sent: ', info);
   })
 }

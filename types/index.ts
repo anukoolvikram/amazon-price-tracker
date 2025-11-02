@@ -25,6 +25,9 @@ export type Product = {
   stars: number;
   isOutOfStock: Boolean;
   users?: User[];
+  createdAt?: Date;
+  updatedAt?: Date;
+  __v?: number;
 };
 
 export type NotificationType =

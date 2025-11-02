@@ -4,6 +4,7 @@ interface Props {
   title: string;
   iconSrc: string;
   value: string;
+  trend: string;
 }
 
 const PriceInfoCard = ({ title, iconSrc, value }: Props) => {
