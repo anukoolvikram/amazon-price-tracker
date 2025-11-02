@@ -9,26 +9,29 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next-auth": "^4.24.5",
-    "mongoose": "^7.5.3",
-    "cheerio": "^1.0.0-rc.12",
-    "axios": "^1.5.1",
-    "framer-motion": "^10.16.4",
-    "react-responsive-carousel": "^3.2.23",
-    "swiper": "^10.3.1",
-    "react-intersection-observer": "^9.5.3",
+    "@auth/mongodb-adapter": "^1.2.0",
     "@headlessui/react": "^1.7.17",
+    "axios": "^1.5.1",
+    "cheerio": "^1.0.0-rc.12",
+    "framer-motion": "^12.23.24",
+    "mongoose": "^7.5.3",
     "next": "14.0.0",
+    "next-auth": "^4.24.5",
+    "nodemailer": "^6.9.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-intersection-observer": "^10.0.0",
+    "react-responsive-carousel": "^3.2.23",
+    "swiper": "^12.0.3"
   },
   "devDependencies": {
     "@types/node": "20.8.0",
+    "@types/nodemailer": "^6.4.11",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
     "autoprefixer": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "5.2.0"
+    "typescript": "^5.0.0"
   }
 }
