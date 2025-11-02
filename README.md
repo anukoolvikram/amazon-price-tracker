@@ -1,56 +1,110 @@
+# 🛍️ PriceTracker - Smart Price Tracking Application
 
-Follow these steps to set up the project locally on your machine.
+A modern, full-stack web application that helps users track product prices from Amazon and get notified when prices drop.  
+Built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **MongoDB**.
 
-**Prerequisites**
+---
 
-Make sure you have the following installed on your machine:
+## ✨ Features
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+- 🔍 **Smart Price Tracking** – Automatically monitor Amazon product prices  
+- 🔔 **Price Drop Alerts** – Get email notifications when prices hit your target  
+- 📊 **Price History** – Visualize price trends over time  
+- 🎯 **Product Insights** – See highest, lowest, and average prices  
+- 🔐 **User Authentication** – Secure login with Google OAuth  
+- 📱 **Responsive Design** – Works perfectly on all devices  
+- ⚡ **Real-time Updates** – Live price monitoring  
 
-**Cloning the Repository**
+---
+
+## 🚀 Tech Stack
+
+- **Frontend:** Next.js 14, React, TypeScript, Tailwind CSS  
+- **Backend:** Next.js API Routes, Server Actions  
+- **Database:** MongoDB with Mongoose  
+- **Authentication:** NextAuth.js with Google OAuth  
+- **Web Scraping:** Cheerio (for Amazon product data)  
+- **Deployment:** Vercel  
+- **Styling:** Tailwind CSS, Framer Motion (for animations)  
+
+---
+
+## 📦 Quick Start
+
+### 🧩 Prerequisites
+
+- Node.js **v18+**  
+- MongoDB database (local or Atlas)  
+- Google OAuth credentials  
+
+---
+
+### ⚙️ 1. Clone the Repository
 
 ```bash
-git clone https://github.com/adrianhajdin/pricewise.git
-cd pricewise
-```
+git clone https://github.com/anukoolvikram/amazon-price-tracker.git
+cd amazon-price-tracker
 
-**Installation**
-
-Install the project dependencies using npm:
-
-```bash
+📥 2. Install Dependencies
 npm install
-```
+# or
+yarn install
+# or
+pnpm install
 
-**Set Up Environment Variables**
+🔐 3. Environment Setup
 
-Create a new file named `.env` in the root of your project and add the following content:
+Create a .env.local file in the root directory and add the following variables:
 
-```env
-#SCRAPER
-BRIGHT_DATA_USERNAME=
-BRIGHT_DATA_PASSWORD=
+# Database
+MONGODB_URI=mongodb://localhost:27017/price-tracker
 
-#DB
-MONGODB_URI=
+# Scraper API
+SCRAPERAPI_KEY="scraper-api-key"
 
-#OUTLOOK
-EMAIL_USER=
-EMAIL_PASS=
-```
+# Sender Email Credentials
+EMAIL_ID="sender-email-id"
+EMAIL_PASSWORD="sender-email-app-password"
 
-Replace the placeholder values with your actual credentials. You can obtain these credentials by signing up on these specific websites from [BrightData](https://brightdata.com/), [MongoDB](https://www.mongodb.com/), and [Node Mailer](https://nodemailer.com/)
+# NextAuth
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your-super-secret-nextauth-secret
 
-**Running the Project**
+# Google OAuth
+GOOGLE_CLIENT_ID=your-google-oauth-client-id
+GOOGLE_CLIENT_SECRET=your-google-oauth-client-secret
 
-```bash
+🔧 4. Set Up Google OAuth
+
+Go to Google Cloud Console
+
+Create a new project or select an existing one
+
+Enable the Google+ API
+
+Create OAuth 2.0 credentials
+
+Add http://localhost:3000 to Authorized Redirect URIs
+
+Copy the Client ID and Client Secret into your .env.local file
+
+▶️ 5. Run the Server
 npm run dev
-```
+# or
+yarn dev
+# or
+pnpm dev
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
+Then open:
+👉 http://localhost:3000
 
+🧭 How to Use
 
+Sign Up / Login – Create an account using Google OAuth
 
+Track a Product – Paste any Amazon product URL in the search bar
+
+Monitor Prices – View price history and insights on the product page
+
+Get Notified – Receive email alerts when prices drop to your target
