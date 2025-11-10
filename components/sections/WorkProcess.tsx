@@ -84,10 +84,10 @@ const WorkProcess = () => {
   }
 
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-white overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-dots-blue-200/30" />
-      
+
       {/* Floating Elements */}
       <motion.div
         animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
@@ -119,13 +119,13 @@ const WorkProcess = () => {
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold font-space-grotesk text-gray-900 mb-6">
-            How 
+            How
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> PriceWise </span>
             Works
           </h2>
-          
+
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Transform your shopping experience in three simple steps. 
+            Transform your shopping experience in three simple steps.
             <span className="font-semibold text-blue-600"> Save money effortlessly</span> with our intelligent price tracking.
           </p>
         </motion.div>
@@ -150,13 +150,12 @@ const WorkProcess = () => {
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
-                whileHover={{ 
+                whileHover={{
                   y: -10,
                   transition: { duration: 0.3 }
                 }}
-                className={`relative text-center group ${
-                  currentStep === index ? 'scale-105' : 'scale-100'
-                } transition-transform duration-300`}
+                className={`relative text-center group ${currentStep === index ? 'scale-105' : 'scale-100'
+                  } transition-transform duration-300`}
               >
                 {/* Step Card */}
                 <div className="bg-white rounded-2xl p-8 shadow-2xl border border-gray-200 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
@@ -172,13 +171,12 @@ const WorkProcess = () => {
                   {/* Step Number with Animation */}
                   <motion.div
                     animate={currentStep === index ? "pulse" : ""}
-                    className={`relative z-10 w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg ${
-                      step.color === 'blue' 
-                        ? 'bg-blue-500' 
-                        : step.color === 'green'
+                    className={`relative z-10 w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg ${step.color === 'blue'
+                      ? 'bg-blue-500'
+                      : step.color === 'green'
                         ? 'bg-green-500'
                         : 'bg-purple-500'
-                    }`}
+                      }`}
                   >
                     <div className="text-white text-2xl font-bold relative">
                       {step.number}
@@ -204,7 +202,7 @@ const WorkProcess = () => {
                   <h3 className="text-2xl font-bold font-space-grotesk text-gray-900 mb-4">
                     {step.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 text-lg leading-relaxed mb-4">
                     {step.description}
                   </p>
@@ -223,15 +221,14 @@ const WorkProcess = () => {
                     {steps.map((_, i) => (
                       <div
                         key={i}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          i === index
-                            ? step.color === 'blue'
-                              ? 'bg-blue-500 w-6'
-                              : step.color === 'green'
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${i === index
+                          ? step.color === 'blue'
+                            ? 'bg-blue-500 w-6'
+                            : step.color === 'green'
                               ? 'bg-green-500 w-6'
                               : 'bg-purple-500 w-6'
-                            : 'bg-gray-300'
-                        }`}
+                          : 'bg-gray-300'
+                          }`}
                       />
                     ))}
                   </div>
@@ -261,16 +258,16 @@ const WorkProcess = () => {
           transition={{ delay: 1, duration: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white shadow-2xl max-w-4xl mx-auto">
+          <div className="bg-blue-600 rounded-2xl p-8 md:p-12 text-white shadow-2xl max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold font-space-grotesk mb-4">
               Ready to Start Saving? 🎉
             </h3>
             <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
               Join thousands of smart shoppers who never overpay. Start tracking your first product now!
             </p>
-            
+
             <motion.button
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)"
               }}

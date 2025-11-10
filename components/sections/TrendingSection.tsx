@@ -62,7 +62,7 @@ const TrendingSection = ({ products }: Props) => {
     : 'Loading...'
 
   return (
-    <section className="relative py-16 md:py-20 bg-gradient-to-br from-orange-50 to-red-50 overflow-hidden">
+    <section className="relative py-16 md:py-20 bg-slate-50 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-slate-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,white)]" />
       

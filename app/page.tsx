@@ -39,8 +39,8 @@ const Home = async () => {
   
   return (
     <div className="min-h-screen">
-      {/* Hero Section - This is all good */}
-      <section className="px-6 py-12 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      {/* Hero Section - Updated */}
+      <section className="px-6 py-12 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex max-xl:flex-col gap-8 lg:gap-12 xl:gap-16 items-center">
             <div className="flex-1 flex flex-col justify-center space-y-4 md:space-y-6">
@@ -62,7 +62,7 @@ const Home = async () => {
                 <span className="text-yellow-300 block mt-2">YourPrice</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-blue-100 max-w-2xl leading-relaxed">
+              <p className="text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed">
                 Track prices, get alerts, and save money effortlessly. Never overpay for your favorite products again.
               </p>
 

@@ -18,7 +18,7 @@ const HotDealsPage = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
       <div className="max-w-2xl mx-auto text-center">
         {/* Animated Emoji */}
         <motion.div
