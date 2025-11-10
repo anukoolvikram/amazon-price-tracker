@@ -11,8 +11,6 @@ let client
 let clientPromise: Promise<MongoClient>
 
 if (process.env.NODE_ENV === "development") {
-  // In development, use a global variable to preserve the client
-  // across module reloads caused by HMR (Hot Module Replacement).
   let globalWithMongo = global as typeof globalThis & {
     _mongoClientPromise?: Promise<MongoClient>
   }
@@ -23,7 +21,6 @@ if (process.env.NODE_ENV === "development") {
   }
   clientPromise = globalWithMongo._mongoClientPromise
 } else {
-  // In production, it's simpler
   client = new MongoClient(uri, options)
   clientPromise = client.connect()
 }
