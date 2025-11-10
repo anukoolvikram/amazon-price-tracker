@@ -147,7 +147,7 @@ const Searchbar = () => {
             <motion.input
               type="text"
               value={searchPrompt}
-              onChange={(e) => setSearchPrompt(e.target.value)}
+              onChange={(e:React.ChangeEvent<HTMLInputElement>) => setSearchPrompt(e.target.value)}
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
               placeholder="Paste Amazon product link here..."
